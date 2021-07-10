@@ -1,0 +1,14 @@
+version: '3'
+services:
+  python3:
+    restart: always
+    #Dockerfileの場所を指定
+    build: .
+    container_name: 'python3'
+    working_dir: '/root/'
+    # コンテナを起動させ続ける
+    tty: true
+    #ボリュームの設定 [ホストのパス]:[コンテナのパス]
+    volumes:
+      - ./opt:/root/opt
+
